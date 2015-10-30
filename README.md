@@ -1,7 +1,7 @@
 Hexo theme: Artemis
 =================
 
-**This hexo theme is a form of [Apollo](https://github.com/joyceim/hexo-theme-apollo)**
+**This hexo theme is a fork of [Apollo](https://github.com/joyceim/hexo-theme-apollo)**
 
 ##Installation
 
