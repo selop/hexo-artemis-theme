@@ -1,4 +1,7 @@
 (function($){
+  // scroll speed
+  var amountScrolled = 300;
+
   // Search
   var $searchWrap = $('#search-form-wrap'),
     isSearchAnim = false,
@@ -105,9 +108,31 @@
   }
 
   // Mobile nav
-
   $(".mobile-nav-panel").click(function() {
-    $(".nav").toggleClass("active")
+    $(".nav").toggleClass("active");
   });
 
+  // Create Jump to Top button
+  $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+
+  // Fade Animation for Scroll to Top button
+  $(window).scroll(function() {
+  	if ( $(window).scrollTop() > amountScrolled ) {
+  		$('a.back-to-top').fadeIn('slow');
+  	} else {
+  		$('a.back-to-top').fadeOut('slow');
+  	}
+  });
+
+  // Pleasant scrolling to the Top
+  $('a.back-to-top').click(function() {
+    $('body, html').animate({scrollTop: 0}, 700);
+    return false;
+  });
+
+  // Animate CSS class injection
+  $('.blog-title').addClass('animated fadeInDownBig');
+  $('.nav').addClass('animated fadeIn');
+  $('body').addClass('animated fadeIn');
 })(jQuery);
