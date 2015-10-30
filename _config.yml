@@ -4,6 +4,8 @@ menu:
   Archives: /archives
   About: /about
 rss: /atom.xml
+twitter: serrsch
+github: selop
 
 # Content
 excerpt_link: Read More
@@ -11,4 +13,4 @@ fancybox: true
 
 # Miscellaneous
 google_analytics:
-favicon: /favicon.png
+favicon: /images/favicon.ico

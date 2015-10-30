@@ -9,8 +9,12 @@
 		<ul>
 			<% for (var i in theme.menu){ %><li><a href="<%- theme.menu[i] %>"><%= i %></a></li><% } %>
 			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
-			<li><a href="https://github.com/selop" id="nav-github-link" class="nav-icon" title="Github"></a></li>
-			<li><a href="https://twitter.com/serrsch" id="nav-twitter-link" class="nav-icon" title="Twitter"></a></li>
+			<% if (theme.twitter) { %>
+					<li><a href="https://twitter.com/<%- theme.twitter %>" id="nav-twitter-link" class="nav-icon" title="Twitter"></a></li>
+			<% } %>
+			<% if (theme.github) { %>
+			<li><a href="https://github.com/<%- theme.github %>" id="nav-github-link" class="nav-icon" title="Github"></a></li>
+			<% } %>
 			<% if (theme.rss){ %>
 				<li><a href="<%- theme.rss %>" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
 			<% } %>
