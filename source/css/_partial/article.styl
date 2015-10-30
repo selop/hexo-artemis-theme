@@ -46,6 +46,9 @@
       color: color-title
       &:hover
         color: color-link
+      &:before
+        content: "\f017"
+        font-family: font-icon
 
   .commentscount
     font-size: 90%
@@ -208,6 +211,10 @@
       margin-left: 0
     &:last-child
       margin-right: 0
+    &:before
+      content: "\f0c6"
+      font-family: font-icon
+      padding-right 5px
 
   .meta
     margin-bottom: .7em
@@ -218,6 +225,7 @@
 .article-tag-list-item
   float: left
   margin-right: 10px
-
   &:before
-    content: "#"
+    content: "\f02b"
+    font-family: font-icon
+    padding-right 5px
