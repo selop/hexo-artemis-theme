@@ -1,6 +1,4 @@
 (function($){
-  // scroll speed
-  var amountScrolled = 300;
 
   // Search
   var $searchWrap = $('#search-form-wrap'),
@@ -115,6 +113,8 @@
   // Create Jump to Top button
   $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 
+  // scroll speed
+  var amountScrolled = 300;
 
   // Fade Animation for Scroll to Top button
   $(window).scroll(function() {
@@ -134,5 +134,9 @@
   // Animate CSS class injection
   $('.blog-title').addClass('animated fadeInDownBig');
   $('.nav').addClass('animated fadeIn');
-  $('body').addClass('animated fadeIn');
+  $('body').addClass('animated fadeIn preload');
+
+  $(window).load(function() {
+    $("body").removeClass("preload");
+  });
 })(jQuery);
